@@ -32,7 +32,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.activity_main);
         dto.add(new MainDTO("콜라", 800, 10));
         dto.add(new MainDTO("사이다", 900, 15));
-        dto.add(new MainDTO("환타", 700, 0));
+        dto.add(new MainDTO("환타", 700, 8));
         dto.add(new MainDTO("실론티", 100, 9));
         btn_insert = findViewById(R.id.btn_insert);
         edt_insert = findViewById(R.id.edt_insert);

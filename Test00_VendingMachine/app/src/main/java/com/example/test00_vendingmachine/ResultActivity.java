@@ -28,7 +28,5 @@ public class ResultActivity extends AppCompatActivity {
         String name4 = intent.getStringExtra("name1");
         int drink_cnt4 = intent.getIntExtra("drink_cnt4", 0);
 
-        if()
-
     }
 }
