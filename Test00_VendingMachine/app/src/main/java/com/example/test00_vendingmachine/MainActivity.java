@@ -161,19 +161,19 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             //  음료 이름, 선택한 음료 개수
             if(drink_cnt1!=0) {
                 intent.putExtra("name1", dto.get(0).getName());
-                intent.putExtra("cnt1", drink_cnt1);
+                intent.putExtra("drink_cnt1", drink_cnt1);
             }
             if(drink_cnt2!=0) {
                 intent.putExtra("name2", dto.get(1).getName());
-                intent.putExtra("cnt2", drink_cnt2);
+                intent.putExtra("drink_cnt2", drink_cnt2);
             }
             if(drink_cnt3!=0) {
                 intent.putExtra("name3", dto.get(2).getName());
-                intent.putExtra("cnt3", drink_cnt3);
+                intent.putExtra("drink_cnt3", drink_cnt3);
             }
             if(drink_cnt4!=0) {
                 intent.putExtra("name4", dto.get(3).getName());
-                intent.putExtra("cnt4", drink_cnt4);
+                intent.putExtra("drink_cnt4", drink_cnt4);
             }
             startActivity(intent);
         }

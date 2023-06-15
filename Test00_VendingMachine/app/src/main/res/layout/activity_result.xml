@@ -4,12 +4,67 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ResultActivity">
+    tools:context=".ResultActivity"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="자판기 잔돈 반환"
+        android:layout_margin="20dp"
+        android:textSize="20dp"
+        android:textStyle="bold"/>
 
     <TextView
         android:id="@+id/change"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="잔액 : 0원" />
+        android:gravity="center"
+        android:text="잔액 : 0원"
+        android:textSize="20dp"
+        android:layout_margin="15dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="주문 음료 목록"
+        android:textSize="20dp"
+        android:layout_margin="10dp"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <TextView
+            android:text=""
+            android:id="@+id/drink1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"/>
+        <TextView
+            android:text=""
+            android:id="@+id/drink2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"/>
+        <TextView
+            android:text=""
+            android:id="@+id/drink3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"/>
+        <TextView
+            android:text=""
+            android:id="@+id/drink4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"/>
+
+    </LinearLayout>
 
 </LinearLayout>
