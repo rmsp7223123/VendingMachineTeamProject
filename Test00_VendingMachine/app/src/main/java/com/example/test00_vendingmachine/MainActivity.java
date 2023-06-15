@@ -65,9 +65,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             }
 
         }else if(v.getId()==R.id.btn_change) {
-            Toast.makeText(MainActivity.this, money+"원 반환되었습니다.", Toast.LENGTH_SHORT).show();
-            money=0;
-            change.setText("잔액 : "+money+"원");
+            Intent intent = new Intent(MainActivity.this, ResultActivity.class);
+            intent.putExtra("money", money);
+            startActivity(intent);
         }
 
         }
