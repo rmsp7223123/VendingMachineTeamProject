@@ -33,4 +33,8 @@ public class MainDTO {
         this.cost = cost;
         this.cnt = cnt;
     }
+
+    public MainDTO(int cnt) {
+        this.cnt = cnt;
+    }
 }
