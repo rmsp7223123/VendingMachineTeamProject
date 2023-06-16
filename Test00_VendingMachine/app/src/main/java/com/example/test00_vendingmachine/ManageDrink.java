@@ -48,14 +48,7 @@ public class ManageDrink extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 intent = new Intent(ManageDrink.this, MainActivity.class);
-                CommonVal.cnt[0] = rtnInt(drink1_count.getText().toString());
-                CommonVal.cnt[1] = rtnInt(drink2_count.getText().toString());
-                CommonVal.cnt[2] = rtnInt(drink3_count.getText().toString());
-                CommonVal.cnt[3] = rtnInt(drink4_count.getText().toString());
-                CommonVal.price[0] = rtnInt(drink1_price.getText().toString());
-                CommonVal.price[1] = rtnInt(drink2_price.getText().toString());
-                CommonVal.price[2] = rtnInt(drink3_price.getText().toString());
-                CommonVal.price[3] = rtnInt(drink4_price.getText().toString());
+
                 startActivity(intent);
             }
         });
@@ -64,7 +57,14 @@ public class ManageDrink extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 intent = new Intent(ManageDrink.this, MainActivity.class);
-
+                CommonVal.cnt[0] = rtnInt(drink1_count.getText().toString());
+                CommonVal.cnt[1] = rtnInt(drink2_count.getText().toString());
+                CommonVal.cnt[2] = rtnInt(drink3_count.getText().toString());
+                CommonVal.cnt[3] = rtnInt(drink4_count.getText().toString());
+                CommonVal.price[0] = rtnInt(drink1_price.getText().toString());
+                CommonVal.price[1] = rtnInt(drink2_price.getText().toString());
+                CommonVal.price[2] = rtnInt(drink3_price.getText().toString());
+                CommonVal.price[3] = rtnInt(drink4_price.getText().toString());
 
                 startActivity(intent);
             }
