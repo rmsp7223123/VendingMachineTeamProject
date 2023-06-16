@@ -199,10 +199,18 @@
         android:layout_width="match_parent"
         android:layout_height="0dp">
         <Button
+            android:layout_weight="1"
             android:id="@+id/btn_add"
             android:text="관리자 버튼"
             android:layout_margin="10dp"
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"/>
+        <Button
+            android:layout_weight="1"
+            android:id="@+id/btn_user"
+            android:text="건의사항"
+            android:layout_margin="10dp"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"/>
 
     </LinearLayout>

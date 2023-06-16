@@ -14,7 +14,7 @@ import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
-    Button btn_insert, btn_change, btn_add, btn1, btn2, btn3, btn4;
+    Button btn_insert, btn_change, btn_add, btn1, btn2, btn3, btn4, btn_user;
 
     ArrayList<MainDTO> dto = new ArrayList<>();
 
@@ -41,6 +41,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         edt_insert = findViewById(R.id.edt_insert);
         btn_change = findViewById(R.id.btn_change);
         btn_add = findViewById(R.id.btn_add);
+        btn_user = findViewById(R.id.btn_user);
         change = findViewById(R.id.change);
         btn_insert.setOnClickListener(this);
         btn_change.setOnClickListener(this);
@@ -77,6 +78,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             @Override
             public void onClick(View v) {
                 intent = new Intent(MainActivity.this, CheckPassword.class);
+                startActivity(intent);
+            }
+        });
+
+        btn_user.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                intent = new Intent(MainActivity.this, User.class);
                 startActivity(intent);
             }
         });
