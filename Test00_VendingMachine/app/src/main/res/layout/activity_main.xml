@@ -293,9 +293,10 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@id/btn_insert2"
                 android:layout_centerHorizontal="true"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="17dp"
                 android:text=""
-                android:textSize="11dp" />
+                android:textStyle="bold"
+                android:textSize="14dp" />
 
             <TextView
                 android:id="@+id/change"
@@ -303,10 +304,11 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@id/edt_insert"
                 android:layout_alignParentStart="true"
-                android:layout_marginStart="35dp"
-                android:layout_marginTop="7dp"
+                android:layout_marginStart="28dp"
+                android:layout_marginTop="2dp"
                 android:text=""
-                android:textSize="8dp" />
+                android:textStyle="bold"
+                android:textSize="11dp" />
 
         </RelativeLayout>
         <LinearLayout
