@@ -5,4 +5,5 @@ public class CommonVal {
     public static int[] cnt = { 1 , 2 , 3 , 4};
     public static int[] price = {1000 , 800 , 500 ,200 };
 
+
 }
