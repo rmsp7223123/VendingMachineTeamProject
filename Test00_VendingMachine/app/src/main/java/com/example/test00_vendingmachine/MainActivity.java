@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -34,6 +35,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+         for (int i = 0; i < CommonVal.names.length; i++) {
+            dto.add(new MainDTO(CommonVal.names[i], CommonVal.price[i], CommonVal.cnt[i]));
+        }
         dto.add(new MainDTO("설탕커피", 500, 10));
         dto.add(new MainDTO("블랙커피", 500, 15));
         dto.add(new MainDTO("밀크커피", 600, 8));
@@ -66,7 +70,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         text_cost3.setText(dto.get(2).getCost() + "원");
         btn4.setOnClickListener(this);
         text_cost4.setText(dto.get(3).getCost() + "원");
-
 
         btn_add.setOnClickListener(new View.OnClickListener() {
             @Override
