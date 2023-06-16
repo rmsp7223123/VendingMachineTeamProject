@@ -5,8 +5,11 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.LinearLayout;
+import android.widget.TextView;
 
 import java.util.ArrayList;
 
@@ -16,6 +19,7 @@ public class ManageDrink extends AppCompatActivity {
     EditText drink1_count, drink2_count, drink3_count, drink4_count, drink1_price, drink2_price, drink3_price, drink4_price;
 
     Intent intent;
+    LinearLayout ln_board;
 
     ArrayList<MainDTO> dto = new ArrayList<>();
 
@@ -33,6 +37,7 @@ public class ManageDrink extends AppCompatActivity {
         drink2_price = findViewById(R.id.drink2_price);
         drink3_price = findViewById(R.id.drink3_price);
         drink4_price = findViewById(R.id.drink4_price);
+        ln_board = findViewById(R.id.ln_board);
 
         drink1_count.setText(CommonVal.cnt[0] + "");
         drink2_count.setText(CommonVal.cnt[1] + "");
@@ -69,6 +74,16 @@ public class ManageDrink extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+
+        ArrayList<String> boardLIst = new ArrayList<>();
+        for (int i = 0; i < 10; i++) {
+            boardLIst.add("글" + i);
+        }
+
+        for (int i = 0; i < boardLIst.size(); i++) {
+            ln_board.addView(createTextView(boardLIst.get(i)));
+        }
     }
 
     public int rtnInt(String strData) {
@@ -77,5 +92,13 @@ public class ManageDrink extends AppCompatActivity {
         } catch (Exception e) {
             return 0;
         }
+    }
+
+    public TextView createTextView(String text){
+        TextView textView = new TextView(this);
+        LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT , ViewGroup.LayoutParams.WRAP_CONTENT);
+        textView.setText(text);
+        textView.setLayoutParams(params);
+        return textView;
     }
 }
