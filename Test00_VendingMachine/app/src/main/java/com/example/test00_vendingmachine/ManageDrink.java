@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
@@ -76,13 +77,13 @@ public class ManageDrink extends AppCompatActivity {
         });
 
 
-        ArrayList<String> boardLIst = new ArrayList<>();
-        for (int i = 0; i < 10; i++) {
-            boardLIst.add("글" + i);
+        for (String sug : CommonVal.sug_list) {
+            Log.d("sug", "onCreate: "+sug);
+
         }
 
-        for (int i = 0; i < boardLIst.size(); i++) {
-            ln_board.addView(createTextView(boardLIst.get(i)));
+        for (int i = 0; i < CommonVal.sug_list.size(); i++) {
+            ln_board.addView(createTextView(CommonVal.sug_list.get(i)));
         }
     }
 
@@ -98,6 +99,7 @@ public class ManageDrink extends AppCompatActivity {
         TextView textView = new TextView(this);
         LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT , ViewGroup.LayoutParams.WRAP_CONTENT);
         textView.setText(text);
+
         textView.setLayoutParams(params);
         return textView;
     }

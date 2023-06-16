@@ -74,6 +74,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         text_cost4.setText(dto.get(3).getName() + dto.get(3).getCost() + "원");
         text_cnt4.setText(dto.get(3).getCnt() + "개 남음");
 
+
+
         btn_add.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -85,7 +87,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btn_user.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                intent = new Intent(MainActivity.this, User.class);
+                intent = new Intent(MainActivity.this, Suggest.class);
                 startActivity(intent);
             }
         });

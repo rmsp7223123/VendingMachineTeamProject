@@ -14,6 +14,7 @@
         android:textSize="26dp"
         android:gravity="center"/>
     <EditText
+        android:id="@+id/suggest"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="추가하고 싶은 음료수를 적어주세요."
@@ -21,6 +22,7 @@
         android:gravity="center"/>
 
     <Button
+        android:id="@+id/btn_sug_commit"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="확인"
