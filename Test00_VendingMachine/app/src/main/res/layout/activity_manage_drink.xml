@@ -38,21 +38,31 @@
                         android:hint="음료명" />
 
                     <EditText
+                        android:id="@+id/drink1_count"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:gravity="center"
                         android:hint="개수" />
 
                     <EditText
+                        android:id="@+id/drink1_price"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:gravity="center"
                         android:hint="가격" />
 
                     <Button
+                        android:id="@+id/btn_add1"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="추가" />
+
+                    <Button
+                        android:id="@+id/btn_del1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="제거" />
+
 
                 </LinearLayout>
 
@@ -74,21 +84,30 @@
                         android:hint="음료명" />
 
                     <EditText
+                        android:id="@+id/drink2_count"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:gravity="center"
                         android:hint="개수" />
 
                     <EditText
+                        android:id="@+id/drink2_price"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:gravity="center"
                         android:hint="가격" />
 
                     <Button
+                        android:id="@+id/btn_add2"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="추가" />
+
+                    <Button
+                        android:id="@+id/btn_del2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="제거" />
 
                 </LinearLayout>
 
@@ -110,21 +129,30 @@
                         android:hint="음료명" />
 
                     <EditText
+                        android:id="@+id/drink3_count"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:gravity="center"
                         android:hint="개수" />
 
                     <EditText
+                        android:id="@+id/drink3_price"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:gravity="center"
                         android:hint="가격" />
 
                     <Button
+                        android:id="@+id/btn_add3"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="추가" />
+
+                    <Button
+                        android:id="@+id/btn_del3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="제거" />
 
                 </LinearLayout>
 
@@ -146,23 +174,224 @@
                         android:hint="음료명" />
 
                     <EditText
+                        android:id="@+id/drink4_count"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:gravity="center"
                         android:hint="개수" />
 
                     <EditText
+                        android:id="@+id/drink4_price"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:gravity="center"
                         android:hint="가격" />
 
                     <Button
+                        android:id="@+id/btn_add4"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="추가" />
 
+                    <Button
+                        android:id="@+id/btn_del4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="제거" />
+
                 </LinearLayout>
+
+
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        android:src="@drawable/drink3" />
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:hint="음료명" />
+
+                    <EditText
+                        android:id="@+id/drink5_count"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:hint="개수" />
+
+                    <EditText
+                        android:id="@+id/drink5_price"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:hint="가격" />
+
+                    <Button
+                        android:id="@+id/btn_add5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="추가" />
+
+                    <Button
+                        android:id="@+id/btn_del5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="제거" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        android:src="@drawable/drink3" />
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:hint="음료명" />
+
+                    <EditText
+                        android:id="@+id/drink6_count"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:hint="개수" />
+
+                    <EditText
+                        android:id="@+id/drink6_price"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:hint="가격" />
+
+                    <Button
+                        android:id="@+id/btn_add6"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="추가" />
+
+                    <Button
+                        android:id="@+id/btn_del6"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="제거" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        android:src="@drawable/drink3" />
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:hint="음료명" />
+
+                    <EditText
+                        android:id="@+id/drink7_count"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:hint="개수" />
+
+                    <EditText
+                        android:id="@+id/drink7_price"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:hint="가격" />
+
+                    <Button
+                        android:id="@+id/btn_add7"
+                        android:layout_width="match_parent"
+                        android:layout_height="62dp"
+                        android:text="추가" />
+
+                    <Button
+                        android:id="@+id/btn_del7"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="제거" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        android:src="@drawable/drink3" />
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:hint="음료명" />
+
+                    <EditText
+                        android:id="@+id/drink8_count"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:hint="개수" />
+
+                    <EditText
+                        android:id="@+id/drink8_price"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:hint="가격" />
+
+                    <Button
+                        android:id="@+id/btn_add8"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="추가" />
+
+                    <Button
+                        android:id="@+id/btn_del8"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="제거" />
+
+                </LinearLayout>
+
+
 
 
             </LinearLayout>
@@ -228,7 +457,6 @@
                     android:textSize="17dp" />
 
                 <EditText
-                    android:id="@+id/drink1_count"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1.5"
@@ -236,7 +464,6 @@
                     android:hint="수량" />
 
                 <EditText
-                    android:id="@+id/drink1_price"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1.5"
@@ -265,7 +492,6 @@
                     android:textSize="17dp" />
 
                 <EditText
-                    android:id="@+id/drink2_count"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1.5"
@@ -273,7 +499,6 @@
                     android:hint="수량" />
 
                 <EditText
-                    android:id="@+id/drink2_price"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1.5"
@@ -302,7 +527,6 @@
                     android:textSize="17dp" />
 
                 <EditText
-                    android:id="@+id/drink3_count"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1.5"
@@ -310,7 +534,6 @@
                     android:hint="수량" />
 
                 <EditText
-                    android:id="@+id/drink3_price"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1.5"
@@ -339,7 +562,6 @@
                     android:textSize="17dp" />
 
                 <EditText
-                    android:id="@+id/drink4_count"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1.5"
@@ -347,7 +569,6 @@
                     android:hint="수량" />
 
                 <EditText
-                    android:id="@+id/drink4_price"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1.5"
@@ -378,31 +599,13 @@
 
             </LinearLayout>
 
+
             <LinearLayout
+                android:id="@+id/ln_board"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
 
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="확인용"
-                    android:textSize="20dp"/>
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="확인용"
-                    android:textSize="20dp"/>
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="확인용"
-                    android:textSize="20dp"/>
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="확인용"
-                    android:textSize="20dp"/>
             </LinearLayout>
         </LinearLayout>
     </ScrollView>
