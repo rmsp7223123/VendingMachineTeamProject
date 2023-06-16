@@ -43,10 +43,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             dto.add(new MainDTO(CommonVal.names[i], CommonVal.price[i], CommonVal.cnt[i]));
 
         }
-        dto.add(new MainDTO("설탕커피", 500, 10));
-        dto.add(new MainDTO("블랙커피", 500, 15));
-        dto.add(new MainDTO("밀크커피", 600, 8));
-        dto.add(new MainDTO("율무차", 700, 9));
         btn_insert1 = findViewById(R.id.btn_insert1);
         btn_insert2 = findViewById(R.id.btn_insert2);
 //        dto.add(new MainDTO("콜라", 800, 10));
