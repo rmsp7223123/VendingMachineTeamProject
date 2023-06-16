@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -72,7 +73,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btn4.setOnClickListener(this);
         text_cost4.setText(dto.get(3).getName() + dto.get(3).getCost() + "원");
         text_cnt4.setText(dto.get(3).getCnt() + "개 남음");
-
 
         btn_add.setOnClickListener(new View.OnClickListener() {
             @Override
