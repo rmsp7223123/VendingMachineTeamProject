@@ -42,6 +42,7 @@ public class ManageDrink extends AppCompatActivity {
         drink2_price.setText(CommonVal.price[1] + "");
         drink3_price.setText(CommonVal.price[2] + "");
         drink4_price.setText(CommonVal.price[3] + "");
+        
 
         btn_count_cancel.setOnClickListener(new View.OnClickListener() {
             @Override
