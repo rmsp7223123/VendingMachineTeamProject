@@ -30,6 +30,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        for (int i = 0; i < CommonVal.names.length; i++) {
+            dto.add(new MainDTO(CommonVal.names[i], CommonVal.price[i], CommonVal.cnt[i]));
+        }
         dto.add(new MainDTO("콜라", 800, 10));
         dto.add(new MainDTO("사이다", 900, 15));
         dto.add(new MainDTO("환타", 700, 8));
