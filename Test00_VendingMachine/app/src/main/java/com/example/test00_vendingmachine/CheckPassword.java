@@ -38,13 +38,13 @@ public class CheckPassword extends AppCompatActivity {
                 }
             }
         });
-//        btn_password_cancel.setOnClickListener(new View.OnClickListener() {
-////            @Override
-////            public void onClick(View v) {
-////                intent = new Intent(CheckPassword.this, Ma0000inActivity.class);
-////                startActivity(intent);
-////            }
-//        });
+        btn_password_cancel.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                intent = new Intent(CheckPassword.this, MainActivity.class);
+                startActivity(intent);
+            }
+        });
 
 
     }
