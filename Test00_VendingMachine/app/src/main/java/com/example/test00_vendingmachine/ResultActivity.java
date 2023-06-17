@@ -23,12 +23,11 @@ public class ResultActivity extends AppCompatActivity {
         setContentView(R.layout.activity_result);
         drink_list = findViewById(R.id.drink_list);
 
-        for (String sug : CommonVal.sug_list) {
-            Log.d("sug", "onCreate: "+sug);
-        }
-
         for (int i = 0; i < MainActivity.dto.size(); i++) {
-//            drink_list.addView(createTextView(MainActivity.dto.get(0).getCost(0));
+            if(CommonVal.drink_cnt_list[i] > 0) {
+                drink_list.addView(createTextView(MainActivity.dto.get(i).getName() + "확인용"));
+            }
+
         }
 
 

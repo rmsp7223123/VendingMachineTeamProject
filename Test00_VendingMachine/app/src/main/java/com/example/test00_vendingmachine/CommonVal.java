@@ -9,6 +9,8 @@ public class CommonVal {
 
     public static int drink_cnt1, drink_cnt2, drink_cnt3, drink_cnt4, drink_cnt5, drink_cnt6, drink_cnt7, drink_cnt8 = 0;
 
+    public static int[] drink_cnt_list = {0,0,0,0,0,0,0,0};
+
     public static ArrayList<String> sug_list = new ArrayList<>() ;
 
 }
