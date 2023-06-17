@@ -23,7 +23,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     ArrayList<MainDTO> dto = new ArrayList<>();
 
-    //   TextView text_cnt1, text_cnt2, text_cnt3, text_cnt4;
     TextView text_cost5, text_cost6, text_cost7, text_cost8;
     EditText edt_insert;
     int money;
@@ -44,14 +43,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
         btn_insert1 = findViewById(R.id.btn_insert1);
         btn_insert2 = findViewById(R.id.btn_insert2);
-//        dto.add(new MainDTO("콜라", 800, 10));
-//        dto.add(new MainDTO("사이다", 900, 15));
-//        dto.add(new MainDTO("환타", 700, 8));
-//        dto.add(new MainDTO("실론티", 100, 9));
-//        dto.add(new MainDTO("음료5", 400, 4));
-//        dto.add(new MainDTO("음료6", 300, 3));
-//        dto.add(new MainDTO("음료7", 200, 2));
-//        dto.add(new MainDTO("음료8", 100, 1));
         edt_insert = findViewById(R.id.edt_insert);
         btn_change = findViewById(R.id.btn_change);
         btn_add = findViewById(R.id.btn_add);
@@ -168,7 +159,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     money -= dto.get(0).getCost();
                     change.setText("잔액 : " + money + "원");
 //                    text_cnt1.setText(dto.get(0).getCnt() + "개 남음");
-                    drink_cnt1++;
+                    CommonVal.drink_cnt1++;
                     Toast.makeText(this, dto.get(0).getName() + " 선택이 완료되었습니다..", Toast.LENGTH_SHORT).show();
                 } else {
                     Toast.makeText(this, "잔액이 부족합니다.", Toast.LENGTH_SHORT).show();
@@ -183,7 +174,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     money -= dto.get(1).getCost();
                     change.setText("잔액 : " + money + "원");
 //                    text_cnt2.setText(dto.get(1).getCnt() + "개 남음");
-                    drink_cnt2++;
+                    CommonVal.drink_cnt2++;
                     Toast.makeText(this, dto.get(1).getName() + " 선택이 완료되었습니다..", Toast.LENGTH_SHORT).show();
                 } else {
                     Toast.makeText(this, "잔액이 부족합니다.", Toast.LENGTH_SHORT).show();
@@ -198,7 +189,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     money -= dto.get(2).getCost();
                     change.setText("잔액 : " + money + "원");
 //                    text_cnt3.setText(dto.get(2).getCnt() + "개 남음");
-                    drink_cnt3++;
+                    CommonVal.drink_cnt3++;
                     Toast.makeText(this, dto.get(2).getName() + " 선택이 완료되었습니다..", Toast.LENGTH_SHORT).show();
                 } else {
                     Toast.makeText(this, "잔액이 부족합니다.", Toast.LENGTH_SHORT).show();
@@ -213,7 +204,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     money -= dto.get(3).getCost();
                     change.setText("잔액 : " + money + "원");
                     //text_cnt4.setText(dto.get(3).getCnt() + "개 남음");
-                    drink_cnt4++;
+                    CommonVal.drink_cnt4++;
                     Toast.makeText(this, dto.get(3).getName() + " 선택이 완료되었습니다..", Toast.LENGTH_SHORT).show();
                 }
                 else {
@@ -230,7 +221,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     money -= dto.get(4).getCost();
                     change.setText("잔액 : " + money + "원");
                     //text_cnt4.setText(dto.get(3).getCnt() + "개 남음");
-                    drink_cnt5++;
+                    CommonVal.drink_cnt5++;
                     Toast.makeText(this, dto.get(4).getName() + " 선택이 완료되었습니다.", Toast.LENGTH_SHORT).show();
                 } else {
                     Toast.makeText(this, "잔액이 부족합니다.", Toast.LENGTH_SHORT).show();
@@ -246,7 +237,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     money -= dto.get(5).getCost();
                     change.setText("잔액 : " + money + "원");
                     //text_cnt4.setText(dto.get(3).getCnt() + "개 남음");
-                    drink_cnt6++;
+                    CommonVal.drink_cnt6++;
                     Toast.makeText(this, dto.get(5).getName() + " 선택이 완료되었습니다..", Toast.LENGTH_SHORT).show();
                 } else {
                     Toast.makeText(this, "잔액이 부족합니다.", Toast.LENGTH_SHORT).show();
@@ -262,7 +253,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     money -= dto.get(6).getCost();
                     change.setText("잔액 : " + money + "원");
                     //text_cnt4.setText(dto.get(3).getCnt() + "개 남음");
-                    drink_cnt7++;
+                    CommonVal.drink_cnt7++;
                     Toast.makeText(this, dto.get(6).getName() + " 선택이 완료되었습니다..", Toast.LENGTH_SHORT).show();
                 } else {
                     Toast.makeText(this, "잔액이 부족합니다.", Toast.LENGTH_SHORT).show();
@@ -278,7 +269,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     money -= dto.get(6).getCost();
                     change.setText("잔액 : " + money + "원");
                     //text_cnt4.setText(dto.get(3).getCnt() + "개 남음");
-                    drink_cnt8++;
+                    CommonVal.drink_cnt8++;
                     Toast.makeText(this, dto.get(6).getName() + " 선택이 완료되었습니다..", Toast.LENGTH_SHORT).show();
                 } else {
                     Toast.makeText(this, "잔액이 부족합니다.", Toast.LENGTH_SHORT).show();

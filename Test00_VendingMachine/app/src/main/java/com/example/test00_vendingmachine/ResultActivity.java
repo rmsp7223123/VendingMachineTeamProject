@@ -36,13 +36,13 @@ public class ResultActivity extends AppCompatActivity {
             drink1.setText(name1+drink_cnt1+"개");
         }
         if(drink_cnt2!=0) {
-            drink2.setText(name2+drink_cnt2+"개");
+            drink2.setText(name2+CommonVal.drink_cnt2+"개");
         }
         if(drink_cnt3!=0) {
-            drink3.setText(name3+drink_cnt3+"개");
+            drink3.setText(name3+CommonVal.drink_cnt3+"개");
         }
         if(drink_cnt4!=0) {
-            drink4.setText(name4+drink_cnt4+"개");
+            drink4.setText(name4+CommonVal.drink_cnt4+"개");
         }
 
         new Handler().postDelayed(new Runnable() {

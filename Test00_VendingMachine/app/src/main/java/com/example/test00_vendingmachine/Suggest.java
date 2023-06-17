@@ -37,7 +37,6 @@ public class Suggest extends AppCompatActivity {
                 intent = new Intent(Suggest.this, MainActivity.class);
 
                 intent.putExtra("suu", suggest.getText().toString());
-                CommonVal.cnt_suggest ++;
                 CommonVal.sug_list.add(suggest.getText().toString());
 
 

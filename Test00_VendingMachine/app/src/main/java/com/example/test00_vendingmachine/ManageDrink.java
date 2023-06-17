@@ -6,6 +6,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.util.TypedValue;
+import android.view.Gravity;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
@@ -268,7 +270,8 @@ public class ManageDrink extends AppCompatActivity {
         TextView textView = new TextView(this);
         LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT , ViewGroup.LayoutParams.WRAP_CONTENT);
         textView.setText(text);
-
+        textView.setTextSize(TypedValue.COMPLEX_UNIT_DIP, 20);
+        textView.setGravity(Gravity.CENTER);
         textView.setLayoutParams(params);
         return textView;
     }
