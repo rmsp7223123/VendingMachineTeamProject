@@ -28,7 +28,7 @@ public class ResultActivity extends AppCompatActivity {
         }
 
         for (int i = 0; i < MainActivity.dto.size(); i++) {
-            drink_list.addView(createTextView(MainActivity.dto.get(0).getCost(0));
+//            drink_list.addView(createTextView(MainActivity.dto.get(0).getCost(0));
         }
 
 
