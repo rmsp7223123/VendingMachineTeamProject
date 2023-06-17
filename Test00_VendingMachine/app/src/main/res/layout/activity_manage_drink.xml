@@ -32,11 +32,11 @@
                         android:layout_height="200dp"
                         android:src="@drawable/coffee" />
 
-                    <EditText
+                    <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:gravity="center"
-                        android:hint="음료명" />
+                        android:text="설탕커피" />
 
                     <EditText
                         android:id="@+id/drink1_count"
@@ -78,11 +78,11 @@
                         android:layout_height="200dp"
                         android:src="@drawable/black" />
 
-                    <EditText
+                    <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:gravity="center"
-                        android:hint="음료명" />
+                        android:text="블랙커피" />
 
                     <EditText
                         android:id="@+id/drink2_count"
@@ -124,11 +124,11 @@
                         android:layout_height="200dp"
                         android:src="@drawable/drink3" />
 
-                    <EditText
+                    <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:gravity="center"
-                        android:hint="음료명" />
+                        android:text="밀크커피" />
 
                     <EditText
                         android:id="@+id/drink3_count"
@@ -169,11 +169,11 @@
                         android:layout_height="200dp"
                         android:src="@drawable/drink3" />
 
-                    <EditText
+                    <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:gravity="center"
-                        android:hint="음료명" />
+                        android:text="율무차" />
 
                     <EditText
                         android:id="@+id/drink4_count"
@@ -220,11 +220,11 @@
                         android:layout_height="200dp"
                         android:src="@drawable/drink3" />
 
-                    <EditText
+                    <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:gravity="center"
-                        android:hint="음료명" />
+                        android:text="코코아" />
 
                     <EditText
                         android:layout_width="match_parent"
@@ -262,52 +262,11 @@
                         android:layout_height="200dp"
                         android:src="@drawable/drink3" />
 
-                    <EditText
+                    <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:gravity="center"
-                        android:hint="음료명" />
-
-                    <EditText
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:gravity="center"
-                        android:hint="개수" />
-
-                    <EditText
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:gravity="center"
-                        android:hint="가격" />
-
-                    <Button
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="추가" />
-
-                    <Button
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="제거" />
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:orientation="vertical">
-
-                    <ImageView
-                        android:layout_width="match_parent"
-                        android:layout_height="200dp"
-                        android:src="@drawable/drink3" />
-
-                    <EditText
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:gravity="center"
-                        android:hint="음료명" />
+                        android:text="매실" />
 
                     <EditText
                         android:layout_width="match_parent"
@@ -344,11 +303,52 @@
                         android:layout_height="200dp"
                         android:src="@drawable/drink3" />
 
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="우유" />
+
                     <EditText
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:gravity="center"
-                        android:hint="음료명" />
+                        android:hint="개수" />
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:hint="가격" />
+
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="추가" />
+
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="제거" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        android:src="@drawable/drink3" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="둥굴레차" />
 
                     <EditText
                         android:layout_width="match_parent"
