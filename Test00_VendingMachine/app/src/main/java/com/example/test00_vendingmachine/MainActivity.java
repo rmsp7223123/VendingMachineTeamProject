@@ -23,8 +23,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     ArrayList<MainDTO> dto = new ArrayList<>();
 
- //   TextView text_cnt1, text_cnt2, text_cnt3, text_cnt4;
-    TextView text_cost5,  text_cost6,  text_cost7, text_cost8 ;
+    //   TextView text_cnt1, text_cnt2, text_cnt3, text_cnt4;
+    TextView text_cost5, text_cost6, text_cost7, text_cost8;
     EditText edt_insert;
     int money;
     TextView change;
@@ -32,7 +32,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     int drink_cnt1, drink_cnt2, drink_cnt3, drink_cnt4;
     int drink_cnt5, drink_cnt6, drink_cnt7, drink_cnt8;
-
 
 
     @Override
@@ -104,7 +103,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         btn8.setOnClickListener(this);
         text_cost8.setText(dto.get(7).getName() + dto.get(7).getCost() + "원");
-
 
 
         btn_add.setOnClickListener(new View.OnClickListener() {
@@ -206,87 +204,82 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     //text_cnt4.setText(dto.get(3).getCnt() + "개 남음");
                     drink_cnt4++;
                     Toast.makeText(this, dto.get(3).getName() + " 선택이 완료되었습니다..", Toast.LENGTH_SHORT).show();
-                } else if (v.getId() == R.id.btn5) {
-                    if (dto.get(4).getCnt() > 0) {
-                        if (money >= (dto.get(4).getCost())) {
-                            dto.set(4, new MainDTO(dto.get(4).getName(), dto.get(4).getCost(), dto.get(4).getCnt() - 1));
-                            money -= dto.get(4).getCost();
-                            change.setText("잔액 : " + money + "원");
-                     //       text_cnt2.setText(dto.get(4).getCnt() + "개 남음");
-                            drink_cnt2++;
-                        } else {
-                            Toast.makeText(this, "잔액이 부족합니다.", Toast.LENGTH_SHORT).show();
-                        }
-                    } else {
-                        Toast.makeText(this, "다른 음료를 선택하세요.", Toast.LENGTH_SHORT).show();
-                    }
-                } else if (v.getId() == R.id.btn6) {
-                    if (dto.get(5).getCnt() > 0) {
-                        if (money >= (dto.get(5).getCost())) {
-                            dto.set(5, new MainDTO(dto.get(5).getName(), dto.get(5).getCost(), dto.get(5).getCnt() - 1));
-                            money -= dto.get(5).getCost();
-                            change.setText("잔액 : " + money + "원");
-                      //      text_cnt2.setText(dto.get(5).getCnt() + "개 남음");
-                            drink_cnt2++;
-                        } else {
-                            Toast.makeText(this, "잔액이 부족합니다.", Toast.LENGTH_SHORT).show();
-                        }
-                    } else {
-                        Toast.makeText(this, "다른 음료를 선택하세요.", Toast.LENGTH_SHORT).show();
-                    }
-                } else if (v.getId() == R.id.btn7) {
-                    if (dto.get(6).getCnt() > 0) {
-                        if (money >= (dto.get(6).getCost())) {
-                            dto.set(6, new MainDTO(dto.get(6).getName(), dto.get(6).getCost(), dto.get(6).getCnt() - 1));
-                            money -= dto.get(6).getCost();
-                            change.setText("잔액 : " + money + "원");
-                           // text_cnt3.setText(dto.get(6).getCnt() + "개 남음");
-                            drink_cnt3++;
-                        } else {
-                            Toast.makeText(this, "잔액이 부족합니다.", Toast.LENGTH_SHORT).show();
-                        }
-                    } else {
-                        Toast.makeText(this, "다른 음료를 선택하세요.", Toast.LENGTH_SHORT).show();
-                    }
-                } else if (v.getId() == R.id.btn8) {
-                    if (dto.get(7).getCnt() > 0) {
-                        if (money >= (dto.get(7).getCost())) {
-                            dto.set(7, new MainDTO(dto.get(7).getName(), dto.get(7).getCost(), dto.get(7).getCnt() - 1));
-                            money -= dto.get(7).getCost();
-                            change.setText("잔액 : " + money + "원");
-                         //   text_cnt4.setText(dto.get(7).getCnt() + "개 남음");
-                            drink_cnt4++;
-                        } else {
-                            Toast.makeText(this, "잔액이 부족합니다.", Toast.LENGTH_SHORT).show();
-                        }
-                    } else {
-                        Toast.makeText(this, "다른 음료를 선택하세요.", Toast.LENGTH_SHORT).show();
-                    }
-                } else if (v.getId() == R.id.btn_change) {
-                    intent = new Intent(MainActivity.this, ResultActivity.class);
-                    intent.putExtra("money", money);
-                    //  음료 이름, 선택한 음료 개수
-                    if (drink_cnt1 != 0) {
-                        intent.putExtra("name1", dto.get(0).getName());
-                        intent.putExtra("drink_cnt1", drink_cnt1);
-                    }
-                    if (drink_cnt2 != 0) {
-                        intent.putExtra("name2", dto.get(1).getName());
-                        intent.putExtra("drink_cnt2", drink_cnt2);
-                    }
-                    if (drink_cnt3 != 0) {
-                        intent.putExtra("name3", dto.get(2).getName());
-                        intent.putExtra("drink_cnt3", drink_cnt3);
-                    }
-                    if (drink_cnt4 != 0) {
-                        intent.putExtra("name4", dto.get(3).getName());
-                        intent.putExtra("drink_cnt4", drink_cnt4);
-                    }
-                    startActivity(intent);
+                } else {
+                    Toast.makeText(this, "잔액이 부족합니다.", Toast.LENGTH_SHORT).show();
                 }
-
+            } else {
+                Toast.makeText(this, "다른 음료를 선택하세요.", Toast.LENGTH_SHORT).show();
             }
 
+        } else if (v.getId() == R.id.btn5) {
+            if (dto.get(4).getCnt() > 0) {
+                if (money >= (dto.get(4).getCost())) {
+                    dto.set(4, new MainDTO(dto.get(4).getName(), dto.get(4).getCost(), dto.get(4).getCnt() - 1));
+                    money -= dto.get(4).getCost();
+                    change.setText("잔액 : " + money + "원");
+                    //text_cnt4.setText(dto.get(3).getCnt() + "개 남음");
+                    drink_cnt5++;
+                    Toast.makeText(this, dto.get(4).getName() + " 선택이 완료되었습니다..", Toast.LENGTH_SHORT).show();
+                } else {
+                    Toast.makeText(this, "잔액이 부족합니다.", Toast.LENGTH_SHORT).show();
+                }
+            } else {
+                Toast.makeText(this, "다른 음료를 선택하세요.", Toast.LENGTH_SHORT).show();
+            }
+
+        } else if (v.getId() == R.id.btn6) {
+            if (dto.get(5).getCnt() > 0) {
+                if (money >= (dto.get(5).getCost())) {
+                    dto.set(5, new MainDTO(dto.get(5).getName(), dto.get(5).getCost(), dto.get(5).getCnt() - 1));
+                    money -= dto.get(5).getCost();
+                    change.setText("잔액 : " + money + "원");
+                    //text_cnt4.setText(dto.get(3).getCnt() + "개 남음");
+                    drink_cnt6++;
+                    Toast.makeText(this, dto.get(5).getName() + " 선택이 완료되었습니다..", Toast.LENGTH_SHORT).show();
+                } else {
+                    Toast.makeText(this, "잔액이 부족합니다.", Toast.LENGTH_SHORT).show();
+                }
+            } else {
+                Toast.makeText(this, "다른 음료를 선택하세요.", Toast.LENGTH_SHORT).show();
+            }
+
+        } else if (v.getId() == R.id.btn7) {
+            if (dto.get(6).getCnt() > 0) {
+                if (money >= (dto.get(6).getCost())) {
+                    dto.set(6, new MainDTO(dto.get(6).getName(), dto.get(6).getCost(), dto.get(6).getCnt() - 1));
+                    money -= dto.get(6).getCost();
+                    change.setText("잔액 : " + money + "원");
+                    //text_cnt4.setText(dto.get(3).getCnt() + "개 남음");
+                    drink_cnt7++;
+                    Toast.makeText(this, dto.get(6).getName() + " 선택이 완료되었습니다..", Toast.LENGTH_SHORT).show();
+                } else {
+                    Toast.makeText(this, "잔액이 부족합니다.", Toast.LENGTH_SHORT).show();
+                }
+            } else {
+                Toast.makeText(this, "다른 음료를 선택하세요.", Toast.LENGTH_SHORT).show();
+            }
+
+        } else if (v.getId() == R.id.btn_change) {
+            intent = new Intent(MainActivity.this, ResultActivity.class);
+            intent.putExtra("money", money);
+            //  음료 이름, 선택한 음료 개수
+            if (drink_cnt1 != 0) {
+                intent.putExtra("name1", dto.get(0).getName());
+                intent.putExtra("drink_cnt1", drink_cnt1);
+            }
+            if (drink_cnt2 != 0) {
+                intent.putExtra("name2", dto.get(1).getName());
+                intent.putExtra("drink_cnt2", drink_cnt2);
+            }
+            if (drink_cnt3 != 0) {
+                intent.putExtra("name3", dto.get(2).getName());
+                intent.putExtra("drink_cnt3", drink_cnt3);
+            }
+            if (drink_cnt4 != 0) {
+                intent.putExtra("name4", dto.get(3).getName());
+                intent.putExtra("drink_cnt4", drink_cnt4);
+            }
+            startActivity(intent);
         }
     }
 }
