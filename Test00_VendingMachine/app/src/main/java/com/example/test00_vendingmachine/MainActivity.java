@@ -163,7 +163,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     Toast.makeText(this, "잔액이 부족합니다.", Toast.LENGTH_SHORT).show();
                 }
             } else {
-                Toast.makeText(this, "다른 음료를 선택하세요.", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "재고가 부족합니다.", Toast.LENGTH_SHORT).show();
             }
         } else if (v.getId() == R.id.btn2) {
             if (dto.get(1).getCnt() > 0) {
@@ -178,7 +178,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     Toast.makeText(this, "잔액이 부족합니다.", Toast.LENGTH_SHORT).show();
                 }
             } else {
-                Toast.makeText(this, "다른 음료를 선택하세요.", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "재고가 부족합니다.", Toast.LENGTH_SHORT).show();
             }
         } else if (v.getId() == R.id.btn3) {
             if (dto.get(2).getCnt() > 0) {
@@ -193,7 +193,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     Toast.makeText(this, "잔액이 부족합니다.", Toast.LENGTH_SHORT).show();
                 }
             } else {
-                Toast.makeText(this, "다른 음료를 선택하세요.", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "재고가 부족합니다.", Toast.LENGTH_SHORT).show();
             }
         } else if (v.getId() == R.id.btn4) {
             if (dto.get(3).getCnt() > 0) {
@@ -209,7 +209,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     Toast.makeText(this, "잔액이 부족합니다.", Toast.LENGTH_SHORT).show();
                 }
             } else {
-                Toast.makeText(this, "다른 음료를 선택하세요.", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "재고가 부족합니다.", Toast.LENGTH_SHORT).show();
             }
 
         } else if (v.getId() == R.id.btn5) {
@@ -225,7 +225,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     Toast.makeText(this, "잔액이 부족합니다.", Toast.LENGTH_SHORT).show();
                 }
             } else {
-                Toast.makeText(this, "다른 음료를 선택하세요.", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "재고가 부족합니다.", Toast.LENGTH_SHORT).show();
             }
 
         } else if (v.getId() == R.id.btn6) {
@@ -241,7 +241,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     Toast.makeText(this, "잔액이 부족합니다.", Toast.LENGTH_SHORT).show();
                 }
             } else {
-                Toast.makeText(this, "다른 음료를 선택하세요.", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "재고가 부족합니다.", Toast.LENGTH_SHORT).show();
             }
 
         } else if (v.getId() == R.id.btn7) {
@@ -257,7 +257,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     Toast.makeText(this, "잔액이 부족합니다.", Toast.LENGTH_SHORT).show();
                 }
             } else {
-                Toast.makeText(this, "다른 음료를 선택하세요.", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "재고가 부족합니다.", Toast.LENGTH_SHORT).show();
             }
 
         } else if (v.getId() == R.id.btn7) {
@@ -273,7 +273,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     Toast.makeText(this, "잔액이 부족합니다.", Toast.LENGTH_SHORT).show();
                 }
             } else {
-                Toast.makeText(this, "다른 음료를 선택하세요.", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "재고가 부족합니다.", Toast.LENGTH_SHORT).show();
             }
 
         } else if (v.getId() == R.id.btn_change) {
