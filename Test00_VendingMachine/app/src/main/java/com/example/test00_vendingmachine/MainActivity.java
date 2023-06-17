@@ -259,6 +259,22 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 Toast.makeText(this, "다른 음료를 선택하세요.", Toast.LENGTH_SHORT).show();
             }
 
+        } else if (v.getId() == R.id.btn7) {
+            if (dto.get(6).getCnt() > 0) {
+                if (money >= (dto.get(6).getCost())) {
+                    dto.set(6, new MainDTO(dto.get(6).getName(), dto.get(6).getCost(), dto.get(6).getCnt() - 1));
+                    money -= dto.get(6).getCost();
+                    change.setText("잔액 : " + money + "원");
+                    //text_cnt4.setText(dto.get(3).getCnt() + "개 남음");
+                    drink_cnt7++;
+                    Toast.makeText(this, dto.get(6).getName() + " 선택이 완료되었습니다..", Toast.LENGTH_SHORT).show();
+                } else {
+                    Toast.makeText(this, "잔액이 부족합니다.", Toast.LENGTH_SHORT).show();
+                }
+            } else {
+                Toast.makeText(this, "다른 음료를 선택하세요.", Toast.LENGTH_SHORT).show();
+            }
+
         } else if (v.getId() == R.id.btn_change) {
             intent = new Intent(MainActivity.this, ResultActivity.class);
             intent.putExtra("money", money);
