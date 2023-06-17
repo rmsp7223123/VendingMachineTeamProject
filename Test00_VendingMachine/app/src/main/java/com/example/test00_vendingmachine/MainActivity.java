@@ -220,7 +220,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     change.setText("잔액 : " + money + "원");
                     //text_cnt4.setText(dto.get(3).getCnt() + "개 남음");
                     drink_cnt5++;
-                    Toast.makeText(this, dto.get(4).getName() + " 선택이 완료되었습니다..", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(this, dto.get(4).getName() + " 선택이 완료되었습니다.", Toast.LENGTH_SHORT).show();
                 } else {
                     Toast.makeText(this, "잔액이 부족합니다.", Toast.LENGTH_SHORT).show();
                 }
