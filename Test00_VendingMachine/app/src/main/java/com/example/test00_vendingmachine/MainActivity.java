@@ -267,7 +267,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     money -= dto.get(6).getCost();
                     change.setText("잔액 : " + money + "원");
                     //text_cnt4.setText(dto.get(3).getCnt() + "개 남음");
-                    drink_cnt7++;
+                    drink_cnt8++;
                     Toast.makeText(this, dto.get(6).getName() + " 선택이 완료되었습니다..", Toast.LENGTH_SHORT).show();
                 } else {
                     Toast.makeText(this, "잔액이 부족합니다.", Toast.LENGTH_SHORT).show();
@@ -295,6 +295,22 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             if (drink_cnt4 != 0) {
                 intent.putExtra("name4", dto.get(3).getName());
                 intent.putExtra("drink_cnt4", drink_cnt4);
+            }
+            if (drink_cnt5 != 0) {
+                intent.putExtra("name5", dto.get(4).getName());
+                intent.putExtra("drink_cnt5", drink_cnt5);
+            }
+            if (drink_cnt6 != 0) {
+                intent.putExtra("name6", dto.get(5).getName());
+                intent.putExtra("drink_cnt6", drink_cnt6);
+            }
+            if (drink_cnt7 != 0) {
+                intent.putExtra("name7", dto.get(6).getName());
+                intent.putExtra("drink_cnt7", drink_cnt7);
+            }
+            if (drink_cnt8 != 0) {
+                intent.putExtra("name8", dto.get(7).getName());
+                intent.putExtra("drink_cnt8", drink_cnt8);
             }
             startActivity(intent);
         }
