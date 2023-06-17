@@ -17,7 +17,7 @@ import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
-    ImageButton btn_insert1, btn_insert2, btn_change, btn_add, btn1, btn2, btn3, btn4, btn5, btn6, btn7, btn8;
+    ImageButton btn_insert1, btn_insert2, btn_change, btn_add, btn1, btn2, btn3, btn4, btn5, btn6, btn7, btn8, btn_user;
 
     TextView text_cost1, text_cost2, text_cost3, text_cost4;
 
@@ -55,6 +55,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         edt_insert = findViewById(R.id.edt_insert);
         btn_change = findViewById(R.id.btn_change);
         btn_add = findViewById(R.id.btn_add);
+        btn_user = findViewById(R.id.btn_user);
         change = findViewById(R.id.change);
         edt_insert = findViewById(R.id.edt_insert);
         btn_insert1.setOnClickListener(this);
@@ -105,10 +106,20 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         text_cost8.setText(dto.get(7).getName() + dto.get(7).getCost() + "원");
 
 
+
+
         btn_add.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 intent = new Intent(MainActivity.this, CheckPassword.class);
+                startActivity(intent);
+            }
+        });
+
+        btn_user.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                intent = new Intent(MainActivity.this, Suggest.class);
                 startActivity(intent);
             }
         });

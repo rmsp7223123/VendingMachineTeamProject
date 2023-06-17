@@ -4,17 +4,15 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.LinearLayout;
 
-public class Suggest extends AppCompatActivity {
+public class User extends AppCompatActivity {
 
     Button btn_sug_commit;
     EditText suggest;
-
-
 
 
 
@@ -23,9 +21,7 @@ public class Suggest extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_suggest);
-
-
+        setContentView(R.layout.activity_user);
         btn_sug_commit =findViewById(R.id.btn_sug_commit);
         suggest = findViewById(R.id.suggest);
 
@@ -34,15 +30,10 @@ public class Suggest extends AppCompatActivity {
         btn_sug_commit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                intent = new Intent(Suggest.this, MainActivity.class);
+                intent = new Intent(User.this, ManageDrink.class);
 
                 intent.putExtra("suu", suggest.getText().toString());
-                CommonVal.cnt_suggest ++;
-                CommonVal.sug_list.add(suggest.getText().toString());
 
-
-
-                Log.d("호호", "onClick: "+suggest.getText().toString());
                 startActivity(intent);
             }
         });
