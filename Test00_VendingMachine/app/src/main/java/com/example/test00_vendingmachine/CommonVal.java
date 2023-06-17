@@ -11,5 +11,4 @@ public class CommonVal {
 
     public static ArrayList<String> sug_list = new ArrayList<>() ;
 
-
 }

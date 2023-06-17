@@ -27,8 +27,8 @@ public class ResultActivity extends AppCompatActivity {
             Log.d("sug", "onCreate: "+sug);
         }
 
-        for (int i = 0; i < CommonVal.sug_list.size(); i++) {
-            drink_list.addView(createTextView(CommonVal.sug_list.get(i)));
+        for (int i = 0; i < MainActivity.dto.size(); i++) {
+            drink_list.addView(createTextView(MainActivity.dto.get(0).getCost(0));
         }
 
 

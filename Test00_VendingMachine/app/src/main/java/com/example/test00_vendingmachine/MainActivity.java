@@ -21,7 +21,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     TextView text_cost1, text_cost2, text_cost3, text_cost4;
 
-    ArrayList<MainDTO> dto = new ArrayList<>();
+    public static ArrayList<MainDTO> dto = new ArrayList<>();
 
     TextView text_cost5, text_cost6, text_cost7, text_cost8;
     EditText edt_insert;
