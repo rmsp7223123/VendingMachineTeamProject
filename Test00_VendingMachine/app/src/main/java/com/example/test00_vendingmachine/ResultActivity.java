@@ -16,6 +16,8 @@ public class ResultActivity extends AppCompatActivity {
 
     LinearLayout drink_list, drink_list2, drink_list3;
 
+    TextView total;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,6 +26,7 @@ public class ResultActivity extends AppCompatActivity {
         drink_list = findViewById(R.id.drink_list);
         drink_list2 = findViewById(R.id.drink_list2);
         drink_list3 = findViewById(R.id.drink_list3);
+        total = findViewById(R.id.total);
 
         for (int i = 0; i < MainActivity.dto.size(); i++) {
             if (CommonVal.drink_cnt_list[i] > 0) {
@@ -41,7 +44,10 @@ public class ResultActivity extends AppCompatActivity {
             if (CommonVal.drink_cnt_list[i] > 0) {
                 drink_list3.addView(createTextViewRight(MainActivity.dto.get(i).getCost() * CommonVal.drink_cnt_list[i] + "원"));
             }
+
         }
+
+        total.setText("");
 
         new Handler().postDelayed(new Runnable() {
             @Override
@@ -91,5 +97,11 @@ public class ResultActivity extends AppCompatActivity {
         textView.setGravity(Gravity.RIGHT);
         textView.setLayoutParams(params);
         return textView;
+    }
+
+    public void totalPrice() {
+        for (int i = 0; i < MainActivity.dto.size(); i++) {
+
+        }
     }
 }
