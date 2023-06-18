@@ -16,7 +16,7 @@ public class ResultActivity extends AppCompatActivity {
 
     LinearLayout drink_list, drink_list2, drink_list3;
 
-    TextView total;
+    TextView total,change_money;
 
 
     @Override
@@ -27,6 +27,7 @@ public class ResultActivity extends AppCompatActivity {
         drink_list2 = findViewById(R.id.drink_list2);
         drink_list3 = findViewById(R.id.drink_list3);
         total = findViewById(R.id.total);
+        change_money = findViewById(R.id.change_money);
 
         for (int i = 0; i < MainActivity.dto.size(); i++) {
             if (CommonVal.drink_cnt_list[i] > 0) {
@@ -47,7 +48,8 @@ public class ResultActivity extends AppCompatActivity {
 
         }
 
-        total.setText("");
+        total.setText("금액 나오는곳");
+        change_money.setText("거스름돈 나오는곳");
 
         new Handler().postDelayed(new Runnable() {
             @Override
@@ -66,6 +68,8 @@ public class ResultActivity extends AppCompatActivity {
         MainActivity.edt_insert.setText("");
         MainActivity.change.setText("");
     }
+
+
 
 
 

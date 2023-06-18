@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     TextView text_cost5, text_cost6, text_cost7, text_cost8;
     static EditText edt_insert;
-    int money;
+    static int money;
     static TextView change;
     Intent intent;
     @Override
