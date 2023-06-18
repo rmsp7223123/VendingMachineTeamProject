@@ -23,6 +23,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     public static ArrayList<MainDTO> dto = new ArrayList<>();
 
+    public static int[] imgArr = { R.drawable.btn, R.drawable.btn2 };
+
     TextView text_cost5, text_cost6, text_cost7, text_cost8;
     static EditText edt_insert;
     static int money;

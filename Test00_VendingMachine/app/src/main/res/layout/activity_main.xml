@@ -38,7 +38,7 @@
                         android:layout_height="24dp"
                         android:layout_alignParentEnd="true"
                         android:layout_alignParentBottom="true"
-                        android:src="@drawable/btn" />
+                        android:src="@drawable/btn2" />
 
                     <TextView
                         android:id="@+id/text_cost1"
@@ -64,7 +64,7 @@
                         android:layout_alignParentEnd="true"
                         android:layout_alignParentBottom="true"
                         android:layout_marginBottom="2dp"
-                        android:src="@drawable/btn" />
+                        android:src="@drawable/btn2" />
 
                     <TextView
                         android:id="@+id/text_cost2"
@@ -91,7 +91,7 @@
                         android:layout_alignParentBottom="true"
                         android:layout_marginBottom="2dp"
                         android:layout_marginRight="3dp"
-                        android:src="@drawable/btn" />
+                        android:src="@drawable/btn2" />
 
                     <TextView
                         android:id="@+id/text_cost3"
@@ -117,7 +117,7 @@
                         android:layout_alignParentBottom="true"
                         android:layout_marginLeft="8dp"
                         android:layout_marginBottom="2dp"
-                        android:src="@drawable/btn" />
+                        android:src="@drawable/btn2" />
 
                     <TextView
                         android:id="@+id/text_cost4"
@@ -149,7 +149,7 @@
                         android:layout_alignParentEnd="true"
                         android:layout_alignParentBottom="true"
                         android:layout_marginBottom="51dp"
-                        android:src="@drawable/btn" />
+                        android:src="@drawable/btn2" />
 
                     <TextView
                         android:id="@+id/text_cost5"
@@ -175,7 +175,7 @@
                         android:layout_alignParentEnd="true"
                         android:layout_alignParentBottom="true"
                         android:layout_marginBottom="51.5dp"
-                        android:src="@drawable/btn" />
+                        android:src="@drawable/btn2" />
 
                     <TextView
                         android:id="@+id/text_cost6"
@@ -202,7 +202,7 @@
                         android:layout_alignParentBottom="true"
                         android:layout_marginBottom="52dp"
                         android:layout_marginRight="5dp"
-                        android:src="@drawable/btn" />
+                        android:src="@drawable/btn2" />
 
                     <TextView
                         android:id="@+id/text_cost7"
@@ -228,7 +228,7 @@
                         android:layout_alignParentBottom="true"
                         android:layout_marginBottom="52dp"
                         android:layout_marginLeft="6dp"
-                        android:src="@drawable/btn" />
+                        android:src="@drawable/btn2" />
 
                     <TextView
                         android:id="@+id/text_cost8"
