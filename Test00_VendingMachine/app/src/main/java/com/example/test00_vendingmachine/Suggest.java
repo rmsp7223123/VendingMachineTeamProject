@@ -11,7 +11,7 @@ import android.widget.EditText;
 
 public class Suggest extends AppCompatActivity {
 
-    Button btn_sug_commit;
+    Button btn_sug_commit, btn_sug_cancel;
     EditText suggest;
 
 
@@ -27,6 +27,7 @@ public class Suggest extends AppCompatActivity {
 
 
         btn_sug_commit =findViewById(R.id.btn_sug_commit);
+        btn_sug_cancel =findViewById(R.id.btn_sug_cancel);
         suggest = findViewById(R.id.suggest);
 
 
@@ -42,6 +43,14 @@ public class Suggest extends AppCompatActivity {
 
 
                 Log.d("호호", "onClick: "+suggest.getText().toString());
+                startActivity(intent);
+            }
+        });
+
+        btn_sug_cancel.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                intent = new Intent(Suggest.this, MainActivity.class);
                 startActivity(intent);
             }
         });
