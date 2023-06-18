@@ -16,7 +16,7 @@ public class ResultActivity extends AppCompatActivity {
 
     LinearLayout drink_list, drink_list2, drink_list3;
 
-    TextView total,change_money;
+    TextView total, change_money;
 
 
     @Override
@@ -37,7 +37,7 @@ public class ResultActivity extends AppCompatActivity {
         }
         for (int i = 0; i < MainActivity.dto.size(); i++) {
             if (CommonVal.drink_cnt_list[i] > 0) {
-                drink_list2.addView(createTextViewCenter( CommonVal.drink_cnt_list[i] + "개"));
+                drink_list2.addView(createTextViewCenter(CommonVal.drink_cnt_list[i] + "개"));
             }
 
         }
@@ -48,8 +48,7 @@ public class ResultActivity extends AppCompatActivity {
 
         }
 
-        total.setText("금액 나오는곳");
-        change_money.setText("거스름돈 나오는곳");
+        money();
 
         new Handler().postDelayed(new Runnable() {
             @Override
@@ -63,15 +62,12 @@ public class ResultActivity extends AppCompatActivity {
     protected void onPause() {
         super.onPause();
         CommonVal.drink_cnt_list = new int[]{
-                0,0,0,0,0,0,0,0
+                0, 0, 0, 0, 0, 0, 0, 0
         };
         MainActivity.edt_insert.setText("");
         MainActivity.change.setText("");
         MainActivity.money = 0;
     }
-
-
-
 
 
     public TextView createTextViewLeft(String text) {
@@ -104,9 +100,12 @@ public class ResultActivity extends AppCompatActivity {
         return textView;
     }
 
-    public void totalPrice() {
+    public void money() {
+        int totalSum = 0;
         for (int i = 0; i < MainActivity.dto.size(); i++) {
-
+            totalSum += MainActivity.dto.get(i).getCost() * CommonVal.drink_cnt_list[i];
         }
+        total.setText(totalSum + "원");
+        change_money.setText(MainActivity.money + "원");
     }
 }
