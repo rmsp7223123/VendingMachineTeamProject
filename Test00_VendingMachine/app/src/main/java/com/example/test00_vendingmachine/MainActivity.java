@@ -149,6 +149,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             handle_drink_button(7);
         } else if (v.getId() == R.id.btn_change) {
             intent = new Intent(MainActivity.this, ResultActivity.class);
+            ImageButton[] buttons = {btn1, btn2, btn3, btn4, btn5, btn6, btn7, btn8};
+            for (int i = 0; i < buttons.length; i++) {
+                    buttons[i].setImageResource(R.drawable.btn2);
+            }
             startActivity(intent);
         }
     }
@@ -161,6 +165,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 change.setText("잔액 : " + money + "원");
                 CommonVal.drink_cnt_list[drink_order]++;
                 Toast.makeText(this, dto.get(drink_order).getName() + " 선택이 완료되었습니다..", Toast.LENGTH_SHORT).show();
+                ImageButton[] buttons = {btn1, btn2, btn3, btn4, btn5, btn6, btn7, btn8};
+                for (int i = 0; i < buttons.length; i++) {
+                    if (money < CommonVal.price[i]) {
+                        buttons[i].setImageResource(R.drawable.btn2);
+                    }
+                }
             } else {
                 Toast.makeText(this, "잔액이 부족합니다.", Toast.LENGTH_SHORT).show();
             }
@@ -174,8 +184,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         for (int i = 0; i < buttons.length; i++) {
             if (money >= CommonVal.price[i]) {
                 buttons[i].setImageResource(R.drawable.btn);
-            } else {
-                buttons[i].setImageResource(R.drawable.btn2);
             }
         }
     }

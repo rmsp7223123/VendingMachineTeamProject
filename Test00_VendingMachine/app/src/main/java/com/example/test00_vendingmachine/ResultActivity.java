@@ -67,6 +67,7 @@ public class ResultActivity extends AppCompatActivity {
         MainActivity.edt_insert.setText("");
         MainActivity.change.setText("");
         MainActivity.money = 0;
+
     }
 
 
