@@ -26,20 +26,21 @@ public class ResultActivity extends AppCompatActivity {
         drink_list3 = findViewById(R.id.drink_list3);
 
         for (int i = 0; i < MainActivity.dto.size(); i++) {
+            System.out.println(MainActivity.dto.size());
             if (CommonVal.drink_cnt_list[i] > 0) {
-                drink_list.addView(createTextViewLeft(MainActivity.dto.get(i).getName() + "확인용     "));
+                drink_list.addView(createTextViewLeft(CommonVal.names[i]));
             }
 
         }
         for (int i = 0; i < MainActivity.dto.size(); i++) {
             if (CommonVal.drink_cnt_list[i] > 0) {
-                drink_list2.addView(createTextViewCenter(MainActivity.dto.get(i).getCnt() + "개       "));
+                drink_list2.addView(createTextViewCenter( CommonVal.drink_cnt_list[i] + "개"));
             }
 
         }
         for (int i = 0; i < MainActivity.dto.size(); i++) {
             if (CommonVal.drink_cnt_list[i] > 0) {
-                drink_list3.addView(createTextViewRight(MainActivity.dto.get(i).getCost() + "원"));
+                drink_list3.addView(createTextViewRight(MainActivity.dto.get(i).getCost() * CommonVal.drink_cnt_list[i] + "원"));
             }
 
         }

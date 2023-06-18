@@ -60,6 +60,9 @@ public class ManageDrink extends AppCompatActivity implements View.OnClickListen
         drink_price[6] = findViewById(R.id.drink7_price);
         drink_price[7] = findViewById(R.id.drink8_price);
 
+
+
+
         for (int i = 0; i < btn_add.length; i++) {
             btn_add[i].setOnClickListener(this);
         }
@@ -82,8 +85,9 @@ public class ManageDrink extends AppCompatActivity implements View.OnClickListen
         } else {
             for (int i = 0; i < btn_add.length; i++) {
                 if (v.getId() == btn_add[i].getId()) {
-                    CommonVal.cnt[i] = rtnInt(drink_count[i].getText().toString());
-                    CommonVal.price[i] = rtnInt(drink_price[i].getText().toString());
+                    MainActivity.dto.set(i, new MainDTO(MainActivity.dto.get(i).getName(),
+                            rtnInt(drink_price[i].getText().toString()),
+                            rtnInt(drink_count[i].getText().toString())));
                 }
             }
         }

@@ -28,18 +28,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     int money;
     TextView change;
     Intent intent;
-
-    int drink_cnt1, drink_cnt2, drink_cnt3, drink_cnt4;
-    int drink_cnt5, drink_cnt6, drink_cnt7, drink_cnt8;
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        for (int i = 0; i < CommonVal.names.length; i++) {
-            dto.add(new MainDTO(CommonVal.names[i], CommonVal.price[i], CommonVal.cnt[i]));
-
+        if (dto.isEmpty()) {
+            for (int i = 0; i < CommonVal.names.length; i++) {
+                dto.add(new MainDTO(CommonVal.names[i], CommonVal.price[i], CommonVal.cnt[i]));
+            }
         }
         btn_insert1 = findViewById(R.id.btn_insert1);
         btn_insert2 = findViewById(R.id.btn_insert2);
