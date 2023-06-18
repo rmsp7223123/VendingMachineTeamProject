@@ -17,177 +17,97 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 
-public class ManageDrink extends AppCompatActivity {
+public class ManageDrink extends AppCompatActivity implements View.OnClickListener {
 
-    Button btn_count_commit, btn_count_cancel,
-            btn_add1, btn_add2, btn_add3, btn_add4, btn_add5, btn_add6, btn_add7, btn_add8;
-
-    EditText drink1_count, drink2_count, drink3_count, drink4_count, drink1_price, drink2_price, drink3_price, drink4_price,
-            drink5_count, drink6_count, drink7_count, drink8_count, drink5_price, drink6_price, drink7_price, drink8_price;
-
-    Intent intent;
-    LinearLayout ln_board;
-
-    ArrayList<MainDTO> dto = new ArrayList<>();
+    private Button[] btn_add = new Button[8];
+    private EditText[] drink_count = new EditText[8];
+    private EditText[] drink_price = new EditText[8];
+    private Button btn_count_commit, btn_count_cancel;
+    private Intent intent;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_manage_drink);
+
         btn_count_commit = findViewById(R.id.btn_count_commit);
         btn_count_cancel = findViewById(R.id.btn_count_cancel);
-        btn_add1 = findViewById(R.id.btn_add1);
-        btn_add2 = findViewById(R.id.btn_add2);
-        btn_add3 = findViewById(R.id.btn_add3);
-        btn_add4 = findViewById(R.id.btn_add4);
-        btn_add5 = findViewById(R.id.btn_add5);
-        btn_add6 = findViewById(R.id.btn_add6);
-        btn_add7 = findViewById(R.id.btn_add7);
-        btn_add8 = findViewById(R.id.btn_add8);
 
-        drink1_count = findViewById(R.id.drink1_count);
-        drink2_count = findViewById(R.id.drink2_count);
-        drink3_count = findViewById(R.id.drink3_count);
-        drink4_count = findViewById(R.id.drink4_count);
-        drink1_price = findViewById(R.id.drink1_price);
-        drink2_price = findViewById(R.id.drink2_price);
-        drink3_price = findViewById(R.id.drink3_price);
-        drink4_price = findViewById(R.id.drink4_price);
-        drink5_count = findViewById(R.id.drink5_count);
-        drink6_count = findViewById(R.id.drink6_count);
-        drink7_count = findViewById(R.id.drink7_count);
-        drink8_count = findViewById(R.id.drink8_count);
-        drink5_price = findViewById(R.id.drink5_price);
-        drink6_price = findViewById(R.id.drink6_price);
-        drink7_price = findViewById(R.id.drink7_price);
-        drink8_price = findViewById(R.id.drink8_price);
-        ln_board = findViewById(R.id.ln_board);
+        btn_add[0] = findViewById(R.id.btn_add1);
+        btn_add[1] = findViewById(R.id.btn_add2);
+        btn_add[2] = findViewById(R.id.btn_add3);
+        btn_add[3] = findViewById(R.id.btn_add4);
+        btn_add[4] = findViewById(R.id.btn_add5);
+        btn_add[5] = findViewById(R.id.btn_add6);
+        btn_add[6] = findViewById(R.id.btn_add7);
+        btn_add[7] = findViewById(R.id.btn_add8);
 
-        drink1_count.setText(CommonVal.cnt[0] + "");
-        drink2_count.setText(CommonVal.cnt[1] + "");
-        drink3_count.setText(CommonVal.cnt[2] + "");
-        drink4_count.setText(CommonVal.cnt[3] + "");
-        drink5_count.setText(CommonVal.cnt[4] + "");
-        drink6_count.setText(CommonVal.cnt[5] + "");
-        drink7_count.setText(CommonVal.cnt[6] + "");
-        drink8_count.setText(CommonVal.cnt[7] + "");
-        drink1_price.setText(CommonVal.price[0] + "");
-        drink2_price.setText(CommonVal.price[1] + "");
-        drink3_price.setText(CommonVal.price[2] + "");
-        drink4_price.setText(CommonVal.price[3] + "");
-        drink5_price.setText(CommonVal.price[4] + "");
-        drink6_price.setText(CommonVal.price[5] + "");
-        drink7_price.setText(CommonVal.price[6] + "");
-        drink8_price.setText(CommonVal.price[7] + "");
+        drink_count[0] = findViewById(R.id.drink1_count);
+        drink_count[1] = findViewById(R.id.drink2_count);
+        drink_count[2] = findViewById(R.id.drink3_count);
+        drink_count[3] = findViewById(R.id.drink4_count);
+        drink_count[4] = findViewById(R.id.drink5_count);
+        drink_count[5] = findViewById(R.id.drink6_count);
+        drink_count[6] = findViewById(R.id.drink7_count);
+        drink_count[7] = findViewById(R.id.drink8_count);
 
+        drink_price[0] = findViewById(R.id.drink1_price);
+        drink_price[1] = findViewById(R.id.drink2_price);
+        drink_price[2] = findViewById(R.id.drink3_price);
+        drink_price[3] = findViewById(R.id.drink4_price);
+        drink_price[4] = findViewById(R.id.drink5_price);
+        drink_price[5] = findViewById(R.id.drink6_price);
+        drink_price[6] = findViewById(R.id.drink7_price);
+        drink_price[7] = findViewById(R.id.drink8_price);
 
+        for (int i = 0; i < btn_add.length; i++) {
+            btn_add[i].setOnClickListener(this);
+        }
 
-        btn_add1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                CommonVal.cnt[0] = rtnInt(drink1_count.getText().toString());
-                CommonVal.price[0] = rtnInt(drink1_price.getText().toString());
-            }
-        });
+        btn_count_cancel.setOnClickListener(this);
+        btn_count_commit.setOnClickListener(this);
 
-        btn_add2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                CommonVal.cnt[1] = rtnInt(drink2_count.getText().toString());
-                CommonVal.price[1] = rtnInt(drink2_price.getText().toString());
-            }
-        });
-
-        btn_add3.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                CommonVal.cnt[2] = rtnInt(drink3_count.getText().toString());
-                CommonVal.price[2] = rtnInt(drink3_price.getText().toString());
-            }
-        });
-
-        btn_add4.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                CommonVal.cnt[3] = rtnInt(drink4_count.getText().toString());
-                CommonVal.price[3] = rtnInt(drink4_price.getText().toString());
-            }
-        });
-
-        btn_add5.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                CommonVal.cnt[4] = rtnInt(drink5_count.getText().toString());
-                CommonVal.price[4] = rtnInt(drink5_price.getText().toString());
-            }
-        });
-
-        btn_add6.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v){
-                CommonVal.cnt[5] = rtnInt(drink6_count.getText().toString());
-                CommonVal.price[5] = rtnInt(drink6_price.getText().toString());
-            }
-        });
-
-        btn_add7.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                CommonVal.cnt[6] = rtnInt(drink7_count.getText().toString());
-                CommonVal.price[6] = rtnInt(drink7_price.getText().toString());
-            }
-        });
-
-        btn_add8.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                CommonVal.cnt[7] = rtnInt(drink8_count.getText().toString());
-                CommonVal.price[7] = rtnInt(drink8_price.getText().toString());
-            }
-        });
-
-        btn_count_cancel.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                intent = new Intent(ManageDrink.this, MainActivity.class);
-
-                startActivity(intent);
-            }
-        });
-
-        btn_count_commit.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                intent = new Intent(ManageDrink.this, MainActivity.class);
-                CommonVal.cnt[0] = rtnInt(drink1_count.getText().toString());
-                CommonVal.cnt[1] = rtnInt(drink2_count.getText().toString());
-                CommonVal.cnt[2] = rtnInt(drink3_count.getText().toString());
-                CommonVal.cnt[3] = rtnInt(drink4_count.getText().toString());
-                CommonVal.cnt[4] = rtnInt(drink1_count.getText().toString());
-                CommonVal.cnt[5] = rtnInt(drink2_count.getText().toString());
-                CommonVal.cnt[6] = rtnInt(drink3_count.getText().toString());
-                CommonVal.cnt[7] = rtnInt(drink4_count.getText().toString());
-                CommonVal.price[0] = rtnInt(drink1_price.getText().toString());
-                CommonVal.price[1] = rtnInt(drink2_price.getText().toString());
-                CommonVal.price[2] = rtnInt(drink3_price.getText().toString());
-                CommonVal.price[3] = rtnInt(drink4_price.getText().toString());
-                CommonVal.price[4] = rtnInt(drink1_price.getText().toString());
-                CommonVal.price[5] = rtnInt(drink2_price.getText().toString());
-                CommonVal.price[6] = rtnInt(drink3_price.getText().toString());
-                CommonVal.price[7] = rtnInt(drink4_price.getText().toString());
-
-                startActivity(intent);
-            }
-        });
-
+        updateDrinkValues();
     }
 
-    public int rtnInt(String strData) {
+    @Override
+    public void onClick(View v) {
+        if (v.getId() == btn_count_commit.getId()) {
+            updateCommonVal();
+            intent = new Intent(ManageDrink.this, MainActivity.class);
+            startActivity(intent);
+        } else if (v.getId() == btn_count_cancel.getId()) {
+            intent = new Intent(ManageDrink.this, MainActivity.class);
+            startActivity(intent);
+        } else {
+            for (int i = 0; i < btn_add.length; i++) {
+                if (v.getId() == btn_add[i].getId()) {
+                    CommonVal.cnt[i] = rtnInt(drink_count[i].getText().toString());
+                    CommonVal.price[i] = rtnInt(drink_price[i].getText().toString());
+                }
+            }
+        }
+    }
+
+    private void updateDrinkValues() {
+        for (int i = 0; i < drink_count.length; i++) {
+            drink_count[i].setText(CommonVal.cnt[i] + "");
+            drink_price[i].setText(CommonVal.price[i] + "");
+        }
+    }
+
+    private void updateCommonVal() {
+        for (int i = 0; i < drink_count.length; i++) {
+            CommonVal.cnt[i] = rtnInt(drink_count[i].getText().toString());
+            CommonVal.price[i] = rtnInt(drink_price[i].getText().toString());
+        }
+    }
+
+    private int rtnInt(String strData) {
         try {
             return Integer.parseInt(strData);
         } catch (Exception e) {
             return 0;
         }
     }
-
 }
