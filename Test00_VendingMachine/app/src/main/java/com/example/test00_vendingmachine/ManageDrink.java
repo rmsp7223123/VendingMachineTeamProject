@@ -230,14 +230,14 @@ public class ManageDrink extends AppCompatActivity {
                 CommonVal.cnt[1] = rtnInt(drink2_count.getText().toString());
                 CommonVal.cnt[2] = rtnInt(drink3_count.getText().toString());
                 CommonVal.cnt[3] = rtnInt(drink4_count.getText().toString());
-                CommonVal.price[0] = rtnInt(drink1_price.getText().toString());
-                CommonVal.price[1] = rtnInt(drink2_price.getText().toString());
-                CommonVal.price[2] = rtnInt(drink3_price.getText().toString());
-                CommonVal.price[3] = rtnInt(drink4_price.getText().toString());
                 CommonVal.cnt[4] = rtnInt(drink1_count.getText().toString());
                 CommonVal.cnt[5] = rtnInt(drink2_count.getText().toString());
                 CommonVal.cnt[6] = rtnInt(drink3_count.getText().toString());
                 CommonVal.cnt[7] = rtnInt(drink4_count.getText().toString());
+                CommonVal.price[0] = rtnInt(drink1_price.getText().toString());
+                CommonVal.price[1] = rtnInt(drink2_price.getText().toString());
+                CommonVal.price[2] = rtnInt(drink3_price.getText().toString());
+                CommonVal.price[3] = rtnInt(drink4_price.getText().toString());
                 CommonVal.price[4] = rtnInt(drink1_price.getText().toString());
                 CommonVal.price[5] = rtnInt(drink2_price.getText().toString());
                 CommonVal.price[6] = rtnInt(drink3_price.getText().toString());
@@ -247,15 +247,6 @@ public class ManageDrink extends AppCompatActivity {
             }
         });
 
-
-        for (String sug : CommonVal.sug_list) {
-            Log.d("sug", "onCreate: "+sug);
-
-        }
-
-        for (int i = 0; i < CommonVal.sug_list.size(); i++) {
-            ln_board.addView(createTextView(CommonVal.sug_list.get(i)));
-        }
     }
 
     public int rtnInt(String strData) {
@@ -266,13 +257,4 @@ public class ManageDrink extends AppCompatActivity {
         }
     }
 
-    public TextView createTextView(String text){
-        TextView textView = new TextView(this);
-        LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT , ViewGroup.LayoutParams.WRAP_CONTENT);
-        textView.setText(text);
-        textView.setTextSize(TypedValue.COMPLEX_UNIT_DIP, 20);
-        textView.setGravity(Gravity.CENTER);
-        textView.setLayoutParams(params);
-        return textView;
-    }
 }

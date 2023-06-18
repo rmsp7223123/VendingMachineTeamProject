@@ -78,7 +78,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         for (int i = 0; i < buttons.length; i++) {
             buttons[i].setOnClickListener(this);
-            textViews[i].setText(dto.get(i).getName() + dto.get(i).getCost() + "원");
+            textViews[i].setText(dto.get(i).getCost() + "원");
         }
 
         btn_add.setOnClickListener(new View.OnClickListener() {
