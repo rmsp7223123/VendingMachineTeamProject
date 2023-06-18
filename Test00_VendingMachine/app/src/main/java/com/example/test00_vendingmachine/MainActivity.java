@@ -106,8 +106,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     Toast.makeText(MainActivity.this, "반환됨. 동전만 넣어주세요.", Toast.LENGTH_SHORT).show();
                 } else {
                     money += addMoney;
-                    Toast.makeText(MainActivity.this, "금액 입력이 완료되었습니다." + money, Toast.LENGTH_SHORT).show();
+                    Toast.makeText(MainActivity.this, "금액 입력이 완료되었습니다." + money+"원", Toast.LENGTH_SHORT).show();
                     change.setText(money + "원");
+                    handle_imageButton();
                 }
             } catch (Exception e) {
                 Toast.makeText(MainActivity.this, "입력 오류. 숫자 값만 입력해주세요.", Toast.LENGTH_SHORT).show();
@@ -123,8 +124,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     Toast.makeText(MainActivity.this, "반환됨. 지폐만 넣어주세요.", Toast.LENGTH_SHORT).show();
                 } else {
                     money += addMoney;
-                    Toast.makeText(MainActivity.this, "금액 입력이 완료되었습니다." + money, Toast.LENGTH_SHORT).show();
+                    Toast.makeText(MainActivity.this, "금액 입력이 완료되었습니다." + money+"원", Toast.LENGTH_SHORT).show();
                     change.setText(money + "원");
+                    handle_imageButton();
                 }
             } catch (Exception e) {
                 Toast.makeText(MainActivity.this, "입력 오류. 숫자 값만 입력해주세요.", Toast.LENGTH_SHORT).show();
@@ -166,4 +168,17 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             Toast.makeText(this, "재고가 부족합니다.", Toast.LENGTH_SHORT).show();
         }
     }
+
+    public void handle_imageButton() {
+        ImageButton[] buttons = {btn1, btn2, btn3, btn4, btn5, btn6, btn7, btn8};
+        for (int i = 0; i < buttons.length; i++) {
+            if (money >= CommonVal.price[i]) {
+                buttons[i].setImageResource(R.drawable.btn);
+            } else {
+                buttons[i].setImageResource(R.drawable.btn2);
+            }
+        }
+    }
+
+
 }
