@@ -62,11 +62,12 @@ public class ResultActivity extends AppCompatActivity {
     @Override
     protected void onPause() {
         super.onPause();
-        drink_list.removeAllViews();
-        drink_list2.removeAllViews();
-        drink_list3.removeAllViews();
+        CommonVal.drink_cnt_list = new int[]{
+                0,0,0,0,0,0,0,0
+        };
         MainActivity.edt_insert.setText("");
         MainActivity.change.setText("");
+        MainActivity.money = 0;
     }
 
 

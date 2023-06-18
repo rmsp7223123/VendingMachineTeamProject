@@ -58,15 +58,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         text_cost4 = findViewById(R.id.text_cost4);
         btn4 = findViewById(R.id.btn4);
         text_cost5 = findViewById(R.id.text_cost5);
-
         btn5 = findViewById(R.id.btn5);
         text_cost6 = findViewById(R.id.text_cost6);
         btn6 = findViewById(R.id.btn6);
         text_cost7 = findViewById(R.id.text_cost7);
-
         btn7 = findViewById(R.id.btn7);
         text_cost8 = findViewById(R.id.text_cost8);
-
         btn8 = findViewById(R.id.btn8);
 
         ImageButton[] buttons = {btn1, btn2, btn3, btn4, btn5, btn6, btn7, btn8};
