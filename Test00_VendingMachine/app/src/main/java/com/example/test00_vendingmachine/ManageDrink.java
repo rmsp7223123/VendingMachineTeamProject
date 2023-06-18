@@ -20,8 +20,7 @@ import java.util.ArrayList;
 public class ManageDrink extends AppCompatActivity {
 
     Button btn_count_commit, btn_count_cancel,
-            btn_add1, btn_add2, btn_add3, btn_add4, btn_add5, btn_add6, btn_add7, btn_add8,
-            btn_del1, btn_del2, btn_del3, btn_del4, btn_del5, btn_del6, btn_del7, btn_del8;
+            btn_add1, btn_add2, btn_add3, btn_add4, btn_add5, btn_add6, btn_add7, btn_add8;
 
     EditText drink1_count, drink2_count, drink3_count, drink4_count, drink1_price, drink2_price, drink3_price, drink4_price,
             drink5_count, drink6_count, drink7_count, drink8_count, drink5_price, drink6_price, drink7_price, drink8_price;
@@ -45,14 +44,6 @@ public class ManageDrink extends AppCompatActivity {
         btn_add6 = findViewById(R.id.btn_add6);
         btn_add7 = findViewById(R.id.btn_add7);
         btn_add8 = findViewById(R.id.btn_add8);
-        btn_del1 = findViewById(R.id.btn_del1);
-        btn_del2 = findViewById(R.id.btn_del2);
-        btn_del3 = findViewById(R.id.btn_del3);
-        btn_del4 = findViewById(R.id.btn_del4);
-        btn_del5 = findViewById(R.id.btn_del5);
-        btn_del6 = findViewById(R.id.btn_del6);
-        btn_del7 = findViewById(R.id.btn_del7);
-        btn_del8 = findViewById(R.id.btn_del8);
 
         drink1_count = findViewById(R.id.drink1_count);
         drink2_count = findViewById(R.id.drink2_count);
@@ -76,14 +67,14 @@ public class ManageDrink extends AppCompatActivity {
         drink2_count.setText(CommonVal.cnt[1] + "");
         drink3_count.setText(CommonVal.cnt[2] + "");
         drink4_count.setText(CommonVal.cnt[3] + "");
-        drink1_price.setText(CommonVal.price[0] + "");
-        drink2_price.setText(CommonVal.price[1] + "");
-        drink3_price.setText(CommonVal.price[2] + "");
-        drink4_price.setText(CommonVal.price[3] + "");
         drink5_count.setText(CommonVal.cnt[4] + "");
         drink6_count.setText(CommonVal.cnt[5] + "");
         drink7_count.setText(CommonVal.cnt[6] + "");
         drink8_count.setText(CommonVal.cnt[7] + "");
+        drink1_price.setText(CommonVal.price[0] + "");
+        drink2_price.setText(CommonVal.price[1] + "");
+        drink3_price.setText(CommonVal.price[2] + "");
+        drink4_price.setText(CommonVal.price[3] + "");
         drink5_price.setText(CommonVal.price[4] + "");
         drink6_price.setText(CommonVal.price[5] + "");
         drink7_price.setText(CommonVal.price[6] + "");
@@ -99,13 +90,6 @@ public class ManageDrink extends AppCompatActivity {
             }
         });
 
-        btn_del1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                drink1_count.setText(String.valueOf(0));
-                drink1_price.setText(String.valueOf(0));
-            }
-        });
         btn_add2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -114,13 +98,6 @@ public class ManageDrink extends AppCompatActivity {
             }
         });
 
-        btn_del2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                drink2_count.setText(String.valueOf(0));
-                drink2_price.setText(String.valueOf(0));
-            }
-        });
         btn_add3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -129,13 +106,6 @@ public class ManageDrink extends AppCompatActivity {
             }
         });
 
-        btn_del3.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                drink3_count.setText(String.valueOf(0));
-                drink3_price.setText(String.valueOf(0));
-            }
-        });
         btn_add4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -144,13 +114,6 @@ public class ManageDrink extends AppCompatActivity {
             }
         });
 
-        btn_del4.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                drink4_count.setText(String.valueOf(0));
-                drink4_price.setText(String.valueOf(0));
-            }
-        });
         btn_add5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -159,13 +122,6 @@ public class ManageDrink extends AppCompatActivity {
             }
         });
 
-        btn_del5.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                drink5_count.setText(String.valueOf(0));
-                drink5_price.setText(String.valueOf(0));
-            }
-        });
         btn_add6.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v){
@@ -174,13 +130,6 @@ public class ManageDrink extends AppCompatActivity {
             }
         });
 
-        btn_del6.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                drink6_count.setText(String.valueOf(0));
-                drink6_price.setText(String.valueOf(0));
-            }
-        });
         btn_add7.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -189,26 +138,11 @@ public class ManageDrink extends AppCompatActivity {
             }
         });
 
-        btn_del7.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                drink7_count.setText(String.valueOf(0));
-                drink7_price.setText(String.valueOf(0));
-            }
-        });
         btn_add8.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 CommonVal.cnt[7] = rtnInt(drink8_count.getText().toString());
                 CommonVal.price[7] = rtnInt(drink8_price.getText().toString());
-            }
-        });
-
-        btn_del8.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                drink8_count.setText(String.valueOf(0));
-                drink8_price.setText(String.valueOf(0));
             }
         });
 
@@ -220,7 +154,6 @@ public class ManageDrink extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-
 
         btn_count_commit.setOnClickListener(new View.OnClickListener() {
             @Override

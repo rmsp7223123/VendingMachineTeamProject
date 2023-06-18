@@ -57,12 +57,6 @@
                         android:layout_height="wrap_content"
                         android:text="변경" />
 
-                    <Button
-                        android:id="@+id/btn_del1"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="제거" />
-
 
                 </LinearLayout>
 
@@ -101,13 +95,6 @@
                         android:layout_height="wrap_content"
                         android:text="변경" />
 
-
-                    <Button
-                        android:id="@+id/btn_del2"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="제거" />
-
                 </LinearLayout>
 
                 <LinearLayout
@@ -145,11 +132,6 @@
                         android:layout_height="wrap_content"
                         android:text="변경" />
 
-                    <Button
-                        android:id="@+id/btn_del3"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="제거" />
 
                 </LinearLayout>
 
@@ -188,17 +170,13 @@
                         android:layout_height="wrap_content"
                         android:text="변경" />
 
-                    <Button
-                        android:id="@+id/btn_del4"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="제거" />
 
                 </LinearLayout>
 
             </LinearLayout>
 
             <LinearLayout
+                android:layout_marginVertical="20dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
@@ -237,11 +215,6 @@
                         android:layout_height="wrap_content"
                         android:text="변경" />
 
-                    <Button
-                        android:id="@+id/btn_del5"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="제거" />
 
 
                 </LinearLayout>
@@ -280,11 +253,6 @@
                         android:layout_height="wrap_content"
                         android:text="변경" />
 
-                    <Button
-                        android:id="@+id/btn_del6"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="제거" />
 
                 </LinearLayout>
 
@@ -323,12 +291,6 @@
                         android:layout_height="wrap_content"
                         android:text="변경" />
 
-                    <Button
-                        android:id="@+id/btn_del7"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="제거" />
-
                 </LinearLayout>
 
                 <LinearLayout
@@ -366,11 +328,6 @@
                         android:layout_height="wrap_content"
                         android:text="변경" />
 
-                    <Button
-                        android:id="@+id/btn_del8"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="제거" />
 
                 </LinearLayout>
 
