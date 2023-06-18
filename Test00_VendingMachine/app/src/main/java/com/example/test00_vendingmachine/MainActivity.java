@@ -24,9 +24,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public static ArrayList<MainDTO> dto = new ArrayList<>();
 
     TextView text_cost5, text_cost6, text_cost7, text_cost8;
-    EditText edt_insert;
+    static EditText edt_insert;
     int money;
-    TextView change;
+    static TextView change;
     Intent intent;
     @Override
     protected void onCreate(Bundle savedInstanceState) {

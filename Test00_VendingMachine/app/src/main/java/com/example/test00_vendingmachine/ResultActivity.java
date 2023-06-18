@@ -26,7 +26,6 @@ public class ResultActivity extends AppCompatActivity {
         drink_list3 = findViewById(R.id.drink_list3);
 
         for (int i = 0; i < MainActivity.dto.size(); i++) {
-            System.out.println(MainActivity.dto.size());
             if (CommonVal.drink_cnt_list[i] > 0) {
                 drink_list.addView(createTextViewLeft(CommonVal.names[i]));
             }
@@ -42,9 +41,7 @@ public class ResultActivity extends AppCompatActivity {
             if (CommonVal.drink_cnt_list[i] > 0) {
                 drink_list3.addView(createTextViewRight(MainActivity.dto.get(i).getCost() * CommonVal.drink_cnt_list[i] + "원"));
             }
-
         }
-
 
         new Handler().postDelayed(new Runnable() {
             @Override
@@ -53,6 +50,18 @@ public class ResultActivity extends AppCompatActivity {
             }
         }, 1000 * 5);
     }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        drink_list.removeAllViews();
+        drink_list2.removeAllViews();
+        drink_list3.removeAllViews();
+        MainActivity.edt_insert.setText("");
+        MainActivity.change.setText("");
+    }
+
+
 
     public TextView createTextViewLeft(String text) {
         TextView textView = new TextView(this);
