@@ -78,9 +78,11 @@ public class ManageDrink extends AppCompatActivity implements View.OnClickListen
         if (v.getId() == btn_count_commit.getId()) {
             updateCommonVal();
             intent = new Intent(ManageDrink.this, MainActivity.class);
+            MainActivity.money = 0;
             startActivity(intent);
         } else if (v.getId() == btn_count_cancel.getId()) {
             intent = new Intent(ManageDrink.this, MainActivity.class);
+            MainActivity.money = 0;
             startActivity(intent);
         } else {
             for (int i = 0; i < btn_add.length; i++) {

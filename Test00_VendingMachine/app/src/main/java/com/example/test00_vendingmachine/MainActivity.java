@@ -165,7 +165,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 Toast.makeText(this, dto.get(drink_order).getName() + " 선택이 완료되었습니다..", Toast.LENGTH_SHORT).show();
                 ImageButton[] buttons = {btn1, btn2, btn3, btn4, btn5, btn6, btn7, btn8};
                 for (int i = 0; i < buttons.length; i++) {
-                    if (money < CommonVal.price[i]) {
+                    if (money < CommonVal.price[i] || MainActivity.dto.get(i).getCnt() < 1) {
                         buttons[i].setImageResource(R.drawable.btn2);
                     }
                 }
