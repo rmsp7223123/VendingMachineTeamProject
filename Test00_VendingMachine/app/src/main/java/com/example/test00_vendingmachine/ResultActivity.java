@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 import android.widget.TextView;
 
 public class ResultActivity extends AppCompatActivity {
@@ -43,5 +44,12 @@ public class ResultActivity extends AppCompatActivity {
         if(drink_cnt4!=0) {
             drink4.setText(name4+drink_cnt4+"개");
         }
+
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                finish();
+            }
+        } , 1000 * 3);
     }
 }
