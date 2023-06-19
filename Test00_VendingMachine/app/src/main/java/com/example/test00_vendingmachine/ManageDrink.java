@@ -33,34 +33,25 @@ public class ManageDrink extends AppCompatActivity implements View.OnClickListen
         btn_count_commit = findViewById(R.id.btn_count_commit);
         btn_count_cancel = findViewById(R.id.btn_count_cancel);
 
-        btn_add[0] = findViewById(R.id.btn_add1);
-        btn_add[1] = findViewById(R.id.btn_add2);
-        btn_add[2] = findViewById(R.id.btn_add3);
-        btn_add[3] = findViewById(R.id.btn_add4);
-        btn_add[4] = findViewById(R.id.btn_add5);
-        btn_add[5] = findViewById(R.id.btn_add6);
-        btn_add[6] = findViewById(R.id.btn_add7);
-        btn_add[7] = findViewById(R.id.btn_add8);
-
-        drink_count[0] = findViewById(R.id.drink1_count);
-        drink_count[1] = findViewById(R.id.drink2_count);
-        drink_count[2] = findViewById(R.id.drink3_count);
-        drink_count[3] = findViewById(R.id.drink4_count);
-        drink_count[4] = findViewById(R.id.drink5_count);
-        drink_count[5] = findViewById(R.id.drink6_count);
-        drink_count[6] = findViewById(R.id.drink7_count);
-        drink_count[7] = findViewById(R.id.drink8_count);
-
-        drink_price[0] = findViewById(R.id.drink1_price);
-        drink_price[1] = findViewById(R.id.drink2_price);
-        drink_price[2] = findViewById(R.id.drink3_price);
-        drink_price[3] = findViewById(R.id.drink4_price);
-        drink_price[4] = findViewById(R.id.drink5_price);
-        drink_price[5] = findViewById(R.id.drink6_price);
-        drink_price[6] = findViewById(R.id.drink7_price);
-        drink_price[7] = findViewById(R.id.drink8_price);
+        Button[] btn_arr = {findViewById(R.id.btn_add1), findViewById(R.id.btn_add2), findViewById(R.id.btn_add3), findViewById(R.id.btn_add4),
+                findViewById(R.id.btn_add5), findViewById(R.id.btn_add6), findViewById(R.id.btn_add7), findViewById(R.id.btn_add8)};
+        EditText[] drink_count_arr = {findViewById(R.id.drink1_count), findViewById(R.id.drink2_count), findViewById(R.id.drink3_count), findViewById(R.id.drink4_count),
+                findViewById(R.id.drink5_count), findViewById(R.id.drink6_count), findViewById(R.id.drink7_count), findViewById(R.id.drink8_count)};
+        EditText[] drink_price_arr = {findViewById(R.id.drink1_price), findViewById(R.id.drink2_price), findViewById(R.id.drink3_price), findViewById(R.id.drink4_price),
+                findViewById(R.id.drink5_price), findViewById(R.id.drink6_price), findViewById(R.id.drink7_price), findViewById(R.id.drink8_price)};
 
 
+        for (int i = 0; i < btn_add.length; i++) {
+            btn_add[i] = btn_arr[i];
+        }
+
+        for (int i = 0; i < drink_count.length; i++) {
+            drink_count[i] = drink_count_arr[i];
+        }
+
+        for (int i = 0; i < drink_price.length; i++) {
+            drink_price[i] = drink_price_arr[i];
+        }
 
 
         for (int i = 0; i < btn_add.length; i++) {
