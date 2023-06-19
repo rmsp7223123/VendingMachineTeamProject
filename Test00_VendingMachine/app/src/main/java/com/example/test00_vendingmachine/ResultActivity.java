@@ -31,19 +31,19 @@ public class ResultActivity extends AppCompatActivity {
 
         for (int i = 0; i < MainActivity.dto.size(); i++) {
             if (CommonVal.drink_cnt_list[i] > 0) {
-                drink_list.addView(createTextViewLeft(CommonVal.names[i]));
+                drink_list.addView(createTextView(CommonVal.names[i], Gravity.LEFT));
             }
 
         }
         for (int i = 0; i < MainActivity.dto.size(); i++) {
             if (CommonVal.drink_cnt_list[i] > 0) {
-                drink_list2.addView(createTextViewCenter(CommonVal.drink_cnt_list[i] + "개"));
+                drink_list2.addView(createTextView(CommonVal.drink_cnt_list[i] + "개", Gravity.CENTER));
             }
 
         }
         for (int i = 0; i < MainActivity.dto.size(); i++) {
             if (CommonVal.drink_cnt_list[i] > 0) {
-                drink_list3.addView(createTextViewRight(MainActivity.dto.get(i).getCost() * CommonVal.drink_cnt_list[i] + "원"));
+                drink_list3.addView(createTextView(MainActivity.dto.get(i).getCost() * CommonVal.drink_cnt_list[i] + "원", Gravity.RIGHT));
             }
 
         }
@@ -71,32 +71,12 @@ public class ResultActivity extends AppCompatActivity {
     }
 
 
-    public TextView createTextViewLeft(String text) {
+    public TextView createTextView(String text, int gravity ) {
         TextView textView = new TextView(this);
         LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
         textView.setText(text);
         textView.setTextSize(TypedValue.COMPLEX_UNIT_DIP, 20);
-        textView.setGravity(Gravity.LEFT);
-        textView.setLayoutParams(params);
-        return textView;
-    }
-
-    public TextView createTextViewCenter(String text) {
-        TextView textView = new TextView(this);
-        LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
-        textView.setText(text);
-        textView.setTextSize(TypedValue.COMPLEX_UNIT_DIP, 20);
-        textView.setGravity(Gravity.CENTER);
-        textView.setLayoutParams(params);
-        return textView;
-    }
-
-    public TextView createTextViewRight(String text) {
-        TextView textView = new TextView(this);
-        LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
-        textView.setText(text);
-        textView.setTextSize(TypedValue.COMPLEX_UNIT_DIP, 20);
-        textView.setGravity(Gravity.RIGHT);
+        textView.setGravity(gravity);//Gravity.LEFT
         textView.setLayoutParams(params);
         return textView;
     }
